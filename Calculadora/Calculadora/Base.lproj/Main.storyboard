@@ -79,10 +79,6 @@
                                     <action selector="calculaNota:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q2e-b9-A6j"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="calificaciones-png-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="hU7-Qs-jch">
-                                <rect key="frame" x="238" y="38" width="95" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calificaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RU-PK-smj">
                                 <rect key="frame" x="38" y="65" width="183" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,6 +86,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grades" translatesAutoresizingMaskIntoConstraints="NO" id="ECf-kV-f8p">
+                                <rect key="frame" x="224" y="31" width="111" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.59607843140000005" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,6 +109,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calificaciones-png-3.png" width="392.17022705078125" height="392.17022705078125"/>
+        <image name="grades" width="512" height="512"/>
     </resources>
 </document>
