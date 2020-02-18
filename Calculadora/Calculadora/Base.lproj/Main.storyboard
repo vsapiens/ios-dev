@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nota Final" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-Bf-tmv">
-                                <rect key="frame" x="64" y="484" width="77" height="21"/>
+                                <rect key="frame" x="64" y="473" width="170" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -75,7 +75,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPr-xO-6ie">
-                                <rect key="frame" x="224" y="403" width="124" height="30"/>
+                                <rect key="frame" x="186" y="403" width="173" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calcula Nota Final"/>
                                 <connections>
@@ -90,12 +90,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grades" translatesAutoresizingMaskIntoConstraints="NO" id="ECf-kV-f8p">
-                                <rect key="frame" x="224" y="31" width="111" height="101"/>
+                                <rect key="frame" x="231" y="44" width="111" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.59607843140000005" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DTg-VD-XOy" appends="YES" id="g1w-DY-Jfn"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="btCalcula" destination="jPr-xO-6ie" id="nN9-ai-3xe"/>
@@ -109,6 +113,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DTg-VD-XOy">
+                    <connections>
+                        <action selector="quitaTeclado:" destination="BYZ-38-t0r" id="ItF-Jf-2c9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="112.89355322338831"/>
         </scene>
