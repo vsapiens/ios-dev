@@ -13,6 +13,7 @@ class ViewControllerInfo: UIViewController {
     @IBOutlet weak var imgFoto: UIImageView!
     @IBOutlet weak var lbAncho: UILabel!
     @IBOutlet weak var lbAltura: UILabel!
+    
     var foto: UIImage!
     var ancho: CGFloat!
     var altura: CGFloat!

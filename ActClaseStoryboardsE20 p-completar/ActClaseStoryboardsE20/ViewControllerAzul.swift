@@ -1,31 +1,26 @@
 //
-//  ViewControllerEditar.swift
-//  storyboardsE20 p-completar
+//  ViewControllerAzul.swift
+//  ActClaseStoryboardsE20
 //
-//  Created by Erick González on 24/02/20.
+//  Created by Erick González on 27/02/20.
 //  Copyright © 2020 com.itesm. All rights reserved.
 //
 
 import UIKit
 
-class ViewControllerEditar: UIViewController {
-    
-    @IBOutlet weak var tfNombre: UITextField!
-    @IBOutlet weak var tfEmail: UITextField!
-    
+class ViewControllerAzul: UIViewController {
     var nombre: String!
-    var email: String!
+    @IBOutlet weak var tfNombre: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tfNombre.text = nombre
-        tfEmail.text = email
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vistaInicial = segue.destination as! ViewController
         vistaInicial.nombre = tfNombre.text
-        vistaInicial.email = tfEmail.text
     }
 
 }
