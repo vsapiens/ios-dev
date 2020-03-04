@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1A84D7240DAF9D00F7BC11 /* ViewControllerEsfera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A84D6240DAF9D00F7BC11 /* ViewControllerEsfera.swift */; };
+		8B1A84D9240DAFAB00F7BC11 /* ViewControllerPrisma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A84D8240DAFAB00F7BC11 /* ViewControllerPrisma.swift */; };
 		8B2FB01C240822A2002908E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FB01B240822A2002908E2 /* AppDelegate.swift */; };
 		8B2FB01E240822A2002908E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FB01D240822A2002908E2 /* SceneDelegate.swift */; };
 		8B2FB020240822A2002908E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FB01F240822A2002908E2 /* ViewController.swift */; };
 		8B2FB023240822A2002908E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2FB021240822A2002908E2 /* Main.storyboard */; };
 		8B2FB025240822A3002908E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2FB024240822A3002908E2 /* Assets.xcassets */; };
 		8B2FB028240822A3002908E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2FB026240822A3002908E2 /* LaunchScreen.storyboard */; };
-		8B2FB03024082396002908E2 /* EsferaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FB02F24082396002908E2 /* EsferaViewController.swift */; };
-		8B2FB032240823B7002908E2 /* PrismaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FB031240823B7002908E2 /* PrismaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B1A84D6240DAF9D00F7BC11 /* ViewControllerEsfera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEsfera.swift; sourceTree = "<group>"; };
+		8B1A84D8240DAFAB00F7BC11 /* ViewControllerPrisma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPrisma.swift; sourceTree = "<group>"; };
 		8B2FB018240822A2002908E2 /* Geometria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geometria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2FB01B240822A2002908E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2FB01D240822A2002908E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,8 +28,6 @@
 		8B2FB024240822A3002908E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B2FB027240822A3002908E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B2FB029240822A3002908E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B2FB02F24082396002908E2 /* EsferaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsferaViewController.swift; sourceTree = "<group>"; };
-		8B2FB031240823B7002908E2 /* PrismaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrismaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 				8B2FB01D240822A2002908E2 /* SceneDelegate.swift */,
 				8B2FB01F240822A2002908E2 /* ViewController.swift */,
 				8B2FB021240822A2002908E2 /* Main.storyboard */,
-				8B2FB02F24082396002908E2 /* EsferaViewController.swift */,
-				8B2FB031240823B7002908E2 /* PrismaViewController.swift */,
+				8B1A84D6240DAF9D00F7BC11 /* ViewControllerEsfera.swift */,
+				8B1A84D8240DAFAB00F7BC11 /* ViewControllerPrisma.swift */,
 				8B2FB024240822A3002908E2 /* Assets.xcassets */,
 				8B2FB026240822A3002908E2 /* LaunchScreen.storyboard */,
 				8B2FB029240822A3002908E2 /* Info.plist */,
@@ -144,10 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B2FB032240823B7002908E2 /* PrismaViewController.swift in Sources */,
+				8B1A84D9240DAFAB00F7BC11 /* ViewControllerPrisma.swift in Sources */,
 				8B2FB020240822A2002908E2 /* ViewController.swift in Sources */,
 				8B2FB01C240822A2002908E2 /* AppDelegate.swift in Sources */,
-				8B2FB03024082396002908E2 /* EsferaViewController.swift in Sources */,
+				8B1A84D7240DAF9D00F7BC11 /* ViewControllerEsfera.swift in Sources */,
 				8B2FB01E240822A2002908E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
