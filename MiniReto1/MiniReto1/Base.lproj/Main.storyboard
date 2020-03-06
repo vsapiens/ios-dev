@@ -98,7 +98,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3Xm-MI-0d3">
-                                <rect key="frame" x="27" y="211" width="321" height="48"/>
+                                <rect key="frame" x="27" y="210.5" width="321" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-zc-fwJ">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
@@ -161,66 +161,115 @@
                                     <constraint firstItem="4oM-Px-ogs" firstAttribute="baseline" secondItem="Fuz-aD-soz" secondAttribute="baseline" id="uJW-tE-E7v"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="iaA-MF-E8K">
-                                <rect key="frame" x="27" y="120" width="321" height="48"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMl-eC-mUR">
+                                <rect key="frame" x="16" y="90" width="343" height="84"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-Ly-fIT">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
-                                        <color key="backgroundColor" red="0.59607843140000005" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
-                                        </accessibility>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="iaA-MF-E8K">
+                                        <rect key="frame" x="11" y="18" width="321" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjy-Ly-fIT">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
+                                                <color key="backgroundColor" red="0.59607843140000005" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                </accessibility>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="lGo-Vk-3MI"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfK-dE-BVO">
+                                                <rect key="frame" x="90" y="0.0" width="50" height="48"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6cv-fk-RZR"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbD-B7-3rt">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="48"/>
+                                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="dcG-yl-bAB"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkU-o4-QaD">
+                                                <rect key="frame" x="270" y="0.0" width="51" height="48"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="lGo-Vk-3MI"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="IfK-dE-BVO" secondAttribute="firstBaseline" id="2YT-gX-O3z"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="31y-yi-2Aj"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="3Hu-bk-tlg"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="6es-7r-Lk6"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="7qE-za-LVg"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="CTX-ea-2NF"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="DPT-hs-qla"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="EG2-oz-QmL"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="Fmg-cE-xfU"/>
+                                            <constraint firstItem="Pjy-Ly-fIT" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="GBz-BQ-0Vt"/>
+                                            <constraint firstItem="IfK-dE-BVO" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="GT8-No-ji0"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="GXG-Tp-7U9"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="IfK-dE-BVO" secondAttribute="firstBaseline" id="I0F-AO-79u"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="xbD-B7-3rt" secondAttribute="baseline" id="MB1-Rc-64X"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="MWK-6b-mfh"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="IfK-dE-BVO" secondAttribute="firstBaseline" id="Mdf-R1-acs"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="xbD-B7-3rt" secondAttribute="baseline" id="Muh-Xo-QNb"/>
+                                            <constraint firstItem="xbD-B7-3rt" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="N2X-hg-EhJ"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="NOn-DH-OjZ"/>
+                                            <constraint firstItem="xbD-B7-3rt" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="Q2n-2y-gbl"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="RrJ-gK-5K5"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="IfK-dE-BVO" secondAttribute="firstBaseline" id="SGz-2s-aSr"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="IfK-dE-BVO" secondAttribute="firstBaseline" id="U0C-B8-C4h"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="UHb-zR-JAU"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="xbD-B7-3rt" secondAttribute="baseline" id="WBO-N4-YcR"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="WBl-hh-kEB"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="WuJ-6X-YMt"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="IfK-dE-BVO" secondAttribute="firstBaseline" id="YNj-zw-wMC"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="YhQ-F0-ueM"/>
+                                            <constraint firstItem="xbD-B7-3rt" firstAttribute="baseline" secondItem="DkU-o4-QaD" secondAttribute="baseline" id="Yox-gM-Ofs"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="ZLH-jC-0D7"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="ZTz-wM-eVd"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="Zxo-9U-bcB"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="cx7-gv-UbL"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="d6N-5A-Vtb"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="xbD-B7-3rt" secondAttribute="baseline" id="giz-8k-N91"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="gjB-oV-mPM"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="hl2-66-9eI"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="jXx-4h-VBO"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="jcn-ZX-mHR"/>
+                                            <constraint firstItem="IfK-dE-BVO" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="oJW-CB-mdt"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="xbD-B7-3rt" secondAttribute="baseline" id="q5E-KK-gYf"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="rZ2-Bz-24W"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="rgu-VZ-fRg"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="xbD-B7-3rt" secondAttribute="baseline" id="sSb-ws-rsq"/>
+                                            <constraint firstItem="IfK-dE-BVO" firstAttribute="firstBaseline" secondItem="DkU-o4-QaD" secondAttribute="firstBaseline" id="xQF-Yd-qhG"/>
+                                            <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="xg1-Mh-AsU"/>
+                                            <constraint firstItem="IfK-dE-BVO" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="y59-3k-SO7"/>
                                         </constraints>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfK-dE-BVO">
-                                        <rect key="frame" x="90" y="0.0" width="50" height="48"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="6cv-fk-RZR"/>
-                                        </constraints>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbD-B7-3rt">
-                                        <rect key="frame" x="180" y="0.0" width="50" height="48"/>
-                                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="dcG-yl-bAB"/>
-                                        </constraints>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkU-o4-QaD">
-                                        <rect key="frame" x="270" y="0.0" width="51" height="48"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="20" maxX="0.0" maxY="10"/>
-                                    </button>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="Fmg-cE-xfU"/>
-                                    <constraint firstItem="Pjy-Ly-fIT" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="GBz-BQ-0Vt"/>
-                                    <constraint firstItem="IfK-dE-BVO" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="GT8-No-ji0"/>
-                                    <constraint firstItem="xbD-B7-3rt" firstAttribute="baseline" secondItem="IfK-dE-BVO" secondAttribute="baseline" id="N2X-hg-EhJ"/>
-                                    <constraint firstItem="xbD-B7-3rt" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="Q2n-2y-gbl"/>
-                                    <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="WuJ-6X-YMt"/>
-                                    <constraint firstItem="xbD-B7-3rt" firstAttribute="baseline" secondItem="DkU-o4-QaD" secondAttribute="baseline" id="Yox-gM-Ofs"/>
-                                    <constraint firstItem="DkU-o4-QaD" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="jXx-4h-VBO"/>
-                                    <constraint firstItem="DkU-o4-QaD" firstAttribute="baseline" secondItem="Pjy-Ly-fIT" secondAttribute="baseline" id="jcn-ZX-mHR"/>
-                                    <constraint firstItem="IfK-dE-BVO" firstAttribute="firstBaseline" secondItem="Pjy-Ly-fIT" secondAttribute="firstBaseline" id="oJW-CB-mdt"/>
-                                    <constraint firstItem="IfK-dE-BVO" firstAttribute="firstBaseline" secondItem="DkU-o4-QaD" secondAttribute="firstBaseline" id="xQF-Yd-qhG"/>
-                                    <constraint firstItem="IfK-dE-BVO" firstAttribute="firstBaseline" secondItem="xbD-B7-3rt" secondAttribute="firstBaseline" id="y59-3k-SO7"/>
+                                    <constraint firstItem="iaA-MF-E8K" firstAttribute="centerX" secondItem="FMl-eC-mUR" secondAttribute="centerX" id="3pI-1G-jBT"/>
+                                    <constraint firstItem="iaA-MF-E8K" firstAttribute="leading" secondItem="FMl-eC-mUR" secondAttribute="leading" constant="11" id="hRD-iL-t34"/>
+                                    <constraint firstItem="iaA-MF-E8K" firstAttribute="centerY" secondItem="FMl-eC-mUR" secondAttribute="centerY" id="vKw-wt-zL1"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7ul-vQ-0Zm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3yk-fN-gy3" secondAttribute="trailing" constant="8" symbolic="YES" id="2UB-Rg-g5N"/>
                             <constraint firstItem="3yk-fN-gy3" firstAttribute="centerX" secondItem="sDX-xz-uMW" secondAttribute="centerX" id="2eJ-td-VlR"/>
                             <constraint firstItem="sDX-xz-uMW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="182" id="2kg-RY-7Wd"/>
+                            <constraint firstItem="sDX-xz-uMW" firstAttribute="top" secondItem="FMl-eC-mUR" secondAttribute="bottom" constant="8" id="2yY-Xk-u0V"/>
                             <constraint firstItem="3yk-fN-gy3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="3he-65-CLf"/>
-                            <constraint firstItem="sDX-xz-uMW" firstAttribute="top" secondItem="iaA-MF-E8K" secondAttribute="bottom" constant="14.5" id="Ezf-YG-Thb"/>
+                            <constraint firstItem="FMl-eC-mUR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7ss-mh-fOM"/>
+                            <constraint firstItem="FMl-eC-mUR" firstAttribute="top" secondItem="ysb-2N-CMG" secondAttribute="bottom" constant="25" id="FTn-sk-KF4"/>
                             <constraint firstItem="3Xm-MI-0d3" firstAttribute="trailing" secondItem="vpB-wH-c67" secondAttribute="trailing" id="ILj-cb-jWf"/>
                             <constraint firstItem="ysb-2N-CMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="Im8-ja-zuE"/>
                             <constraint firstItem="vpB-wH-c67" firstAttribute="top" secondItem="3yk-fN-gy3" secondAttribute="bottom" constant="63" id="KLa-Ju-P7K"/>
@@ -230,10 +279,9 @@
                             <constraint firstItem="sDX-xz-uMW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="bJ3-Qy-sqj"/>
                             <constraint firstItem="ysb-2N-CMG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bg0-0W-qn9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vpB-wH-c67" secondAttribute="bottom" constant="67" id="hdn-u0-Ka3"/>
-                            <constraint firstItem="3Xm-MI-0d3" firstAttribute="leading" secondItem="iaA-MF-E8K" secondAttribute="leading" id="isz-1C-hIh"/>
-                            <constraint firstItem="3Xm-MI-0d3" firstAttribute="trailing" secondItem="iaA-MF-E8K" secondAttribute="trailing" id="mak-7j-Tuj"/>
                             <constraint firstItem="3Xm-MI-0d3" firstAttribute="leading" secondItem="vpB-wH-c67" secondAttribute="leading" id="o2q-zs-yZm"/>
                             <constraint firstItem="ysb-2N-CMG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="sk7-mG-G8y"/>
+                            <constraint firstItem="FMl-eC-mUR" firstAttribute="centerX" secondItem="ysb-2N-CMG" secondAttribute="centerX" id="sr4-Dk-jK8"/>
                             <constraint firstItem="ysb-2N-CMG" firstAttribute="centerX" secondItem="vpB-wH-c67" secondAttribute="centerX" id="wrh-dF-vSi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ul-vQ-0Zm" secondAttribute="trailing" constant="47.5" id="zuG-F1-a0S"/>
                         </constraints>
@@ -248,6 +296,7 @@
                         <outlet property="stAdivina" destination="3Xm-MI-0d3" id="ctD-GQ-NaW"/>
                         <outlet property="stProbar" destination="iaA-MF-E8K" id="hsj-2K-Fap"/>
                         <outlet property="stRetro" destination="vpB-wH-c67" id="brU-CV-NmJ"/>
+                        <outlet property="viewBlank" destination="FMl-eC-mUR" id="rsD-Oo-Py3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

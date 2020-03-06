@@ -14,19 +14,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         stProbar.alpha = 0
-        stRetro.alpha = 0
+        for subView in stRetro.arrangedSubviews {
+            subView.alpha = 0
+            subView.backgroundColor = nil
+        }
+        viewBlank.alpha = 0
         iniciarJuego()
     }
     @IBOutlet weak var stProbar: UIStackView!
     @IBOutlet weak var sgControl: UISegmentedControl!
     @IBOutlet weak var stAdivina: UIStackView!
     @IBOutlet weak var stRetro: UIStackView!
-    
+    @IBOutlet weak var viewBlank: UIView!
     @IBOutlet weak var btnAd1: UIButton!
     @IBOutlet weak var btnAd2: UIButton!
     @IBOutlet weak var btnAd3: UIButton!
     @IBOutlet weak var btnAd4: UIButton!
+
     var orderColor = [0,0,0,0]
+    var intentos = 0
     
     @IBAction func sProbar1(_ sender: Any) {
         orderColor[0] = (orderColor[0] + 1) % 6
@@ -48,35 +54,82 @@ class ViewController: UIViewController {
     let colors = [UIColor.red,UIColor.green,UIColor.blue,UIColor.yellow,UIColor.orange,UIColor.black]
     
     func iniciarJuego(){
+        intentos = 0
+        stRetro.alpha = 0
         var random = [0,1,2,3,4,5]
         var key : Int!
-        for subView in stProbar.subviews {
+        for subView in stProbar.arrangedSubviews {
             key =  Int.random(in: 0..<random.count)
             subView.backgroundColor = colors[random[key]]
             random.remove(at: key)
         }
-        for subView in stAdivina.subviews {
-            subView.backgroundColor = UIColor.white
+        for subView in stAdivina.arrangedSubviews {
+            subView.backgroundColor = UIColor.orange
         }
-        for subView in stRetro.subviews {
-            subView.backgroundColor = UIColor.white
+        for subView in stRetro.arrangedSubviews {
+            subView.alpha = 0
+            subView.backgroundColor = nil
         }
     }
     
     func probarJuego()->Bool{
-        for i in 0..<3{
-            if stProbar.subviews[i].backgroundColor == stAdivina.subviews[i].backgroundColor {
-                stRetro.subviews[i].backgroundColor = UIColor.white
-            } else {
-                
-            }
+        intentos += 1
+        stRetro.alpha = 1
+        var newOrder = Set<UIColor>()
+        var inPlace = 0
+        var inColor = 0
             
+        for subView in stAdivina.arrangedSubviews {
+                newOrder.insert(subView.backgroundColor!)
         }
-        return true
-    }
+        for subView in stProbar.arrangedSubviews {
+            if newOrder.contains(subView.backgroundColor!){
+                inColor += 1
+            }
+        }
+        
+        for i in 0...3 {
+            if stProbar.arrangedSubviews[i].backgroundColor == stAdivina.arrangedSubviews[i].backgroundColor {
+                inPlace += 1
+            }
+        }
+        
+        if inPlace == 4 {
+            return true
+        }
+        
+        inColor -= inPlace
+        
+        var x = 0
+        
+        while inColor != 0 {
+            stRetro.arrangedSubviews[3-x].backgroundColor = UIColor.white
+            stRetro.arrangedSubviews[3-x].alpha = 1
+            x += 1
+            inColor -= 1
+        }
+        
+        while inPlace != 0 {
+            stRetro.arrangedSubviews[3-x].backgroundColor = UIColor.red
+            stRetro.arrangedSubviews[3-x].alpha = 1
+            x += 1
+            inPlace -= 1
+        }
+
+        while x <= 3 {
+                stRetro.arrangedSubviews[3-x].backgroundColor = nil
+                stRetro.arrangedSubviews[3-x].alpha = 0
+                x += 1
+        }
+            
+        return false
+}
     
     
     @IBAction func runGame(_ sender: Any) {
+        sgControl.selectedSegmentIndex = 0
+        stProbar.alpha = 0
+        viewBlank.alpha = 0
         iniciarJuego()
     }
     
@@ -86,13 +139,12 @@ class ViewController: UIViewController {
             let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(accion)
             present(alert,animated: true,completion: nil)
-        } else if probarJuego(){
-        let alert = UIAlertController(title: "Error", message: "¡Haz Ganado!", preferredStyle: .alert)
+        } else if probarJuego() {
+        let alert = UIAlertController(title: "Felicidades", message: "¡Haz Ganado en \(intentos) intentos!", preferredStyle: .alert)
         let accion = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(accion)
-        present(alert,animated: true,completion: iniciarJuego)
-        } else {
-            
+        present(alert,animated: true,completion: nil)
+            iniciarJuego()
         }
     }
     
@@ -102,8 +154,10 @@ class ViewController: UIViewController {
         {
         case 0:
             stProbar.alpha = 0
+            viewBlank.alpha = 0
         case 1:
             stProbar.alpha = 1
+            viewBlank.alpha = 1
         default:
             break
         }
