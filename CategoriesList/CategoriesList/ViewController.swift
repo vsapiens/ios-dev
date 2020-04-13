@@ -10,7 +10,7 @@ import UIKit
 
 protocol administraCategorías{
     func agregaCategoría(category : Categoria)->Void
-    func modificaCategoría(category : Categoria)->Void
+    func modificaCategoría(category : Categoria, color: UIColor)->Void
 }
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
@@ -23,13 +23,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     var categorias : [Categoria]!
     var colores : [UIColor]!
+    var isEnabled : Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        title = current.titulo
-        self.view.backgroundColor = current.color
-        tfNombre.text = current.titulo
+        if isEnabled {
+            tfNombre.isUserInteractionEnabled = true
+        }
+            else {
+            tfNombre.isUserInteractionEnabled = false
+            self.view.backgroundColor = current.color
+            tfNombre.text = current.titulo
+        }
         tableView.reloadData()
     }
     
@@ -38,9 +44,26 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let celda = tableView.dequeueReusableCell(withIdentifier: "cellColor")!
+        let celda = tableView.dequeueReusableCell(withIdentifier: "cellColor")!
         celda.contentView.backgroundColor = colores[indexPath.row]
         return celda
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if isEnabled {
+            if tfNombre.text != "" {
+                let newCategoria = Categoria(titulo: tfNombre.text!, color: colores[indexPath.row])
+            delegado.agregaCategoría(category: newCategoria)
+                navigationController?.popViewController(animated: true)
+            }
+        } else {
+            let newCategoria = Categoria(titulo: current.titulo, color: colores[indexPath.row])
+            delegado.modificaCategoría(category: newCategoria,color: current.color)
+                        navigationController?.popViewController(animated: true)
+        }
+        
+    }
+    
 }
 

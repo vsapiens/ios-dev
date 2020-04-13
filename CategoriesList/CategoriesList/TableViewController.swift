@@ -10,17 +10,26 @@ import UIKit
 
 class TableViewController: UITableViewController,administraCategorías {
     func agregaCategoría(category: Categoria) {
+        posiblesColores = posiblesColores.filter{$0 != category.color}
+        tasks.append(category)
+        tableView.reloadData()
     }
     
-    func modificaCategoría(category: Categoria) {
+    func modificaCategoría(category: Categoria,color: UIColor) {
+        tasks[selectedIndex] = category
+        posiblesColores = posiblesColores.filter{$0 != category.color}
+        posiblesColores.append(color)
+        tableView.reloadData()
     }
     
     var tasks = [Categoria]()
     var posiblesColores = [UIColor.blue, UIColor.green, UIColor.purple, UIColor.red, UIColor.yellow, UIColor.orange, UIColor.cyan]
+    var selectedIndex : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Categorias"
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -47,10 +56,16 @@ class TableViewController: UITableViewController,administraCategorías {
         let vistaColor = segue.destination as! ViewController
         vistaColor.delegado = self
         vistaColor.colores = posiblesColores
+        
         if segue.identifier == "muestra"{
             let indexPath = tableView.indexPathForSelectedRow!
             vistaColor.current = tasks[indexPath.row]
+            selectedIndex = indexPath.row
+            vistaColor.isEnabled = false
+            vistaColor.title = "Modificar Categoría"
+        } else {
+            vistaColor.isEnabled = true
+            vistaColor.title = "Nueva Categoría"
         }
     }
-
 }
